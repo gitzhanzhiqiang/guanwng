@@ -17,7 +17,18 @@ To capture investing hotspots worldwide and realize the target of robust value-a
 				<h2>TYPE OF INSURANCE</h2>
 				<div class="type_st" :style="beicaddd">
 					<ul>
-						<li></li>
+						<li :style="litu">
+							<img src="~@res/imgd/renwu1.png"/>
+							<p>OWERSEAS STUDENT INSURANCE</p>
+						</li>
+						<li :style="litu">
+							<img src="~@res/imgd/renwu2.png"/>
+							<p>OWERSEAS STUDENT INSURANCE</p>
+						</li>
+						<li :style="litu">
+							<img src="~@res/imgd/renwu3.png"/>
+							<p>OWERSEAS STUDENT INSURANCE</p>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -30,10 +41,14 @@ To capture investing hotspots worldwide and realize the target of robust value-a
 	export default {
 		data() {
 			var beicaddd = require("@res/imgd/beicaddd.png");
+			var litu = require("@res/imgd/litu.png");
 			return {
 				img1: require("@res/imgd/bannercc.png"),
 				beicaddd:{
 					backgroundImage: "url(" + beicaddd + ")",
+				},
+				litu:{
+					backgroundImage: "url(" + litu + ")",
 				},
 			}
 		},
@@ -145,8 +160,34 @@ To capture investing hotspots worldwide and realize the target of robust value-a
 	height: 645px;
 	background-size: 100% 100%;
 }
+.type .type_st ul {
+	width: 1198px;
+	height: 525px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
 .type .type_st ul li{
 	width: 365px;
 	height: 525px;
+	float: left;
+	border-radius:24px;
+	box-shadow:2px 14px 46px rgba(0,0,0,0.07);
+	margin-right: 50px;
+}
+.type .type_st ul li:last-child{
+	margin-right: 0px;
+}
+.type .type_st ul li img{
+	width: 100%;
+	height: 439px;
+	display: block;
+}
+.type .type_st ul li p{
+	text-align: center;
+	font-size:18px;
+	font-family:SenticoSansDT-Light;
+	font-weight:normal;
+	color:rgba(0,0,0,1);
+	padding-top: 28px;
 }
 </style>

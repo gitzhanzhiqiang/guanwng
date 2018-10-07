@@ -1,79 +1,52 @@
 <template>
-	<div class="app-container calendar-list-container ggg_user">
-		<div class="banner">
+    <div class="ggg_user">
+       <div class="banner">
 			<img :src="img1">
 			<P>AN OPEN-SOURCE FAIR<br /> 
 FREE BLOCK CHAIN <br /> 
 APPLICATION PLATFORM</P>
 		</div>
 		<div class="con">
-			<div class="Partner">
-				<h2 class="cent">WHY YOU CHOOSE GOLD ORE ?</h2>
+			<div class="introduce">
+				<h1>OUR MISSION</h1>
+				<p>Based on Singapore, have the whole world in view. </p>
+				<p>Provide one-stop flexible professional solutions for individuals and corporate customers by diversified business platforms of the Group.</p>
+				<p>Professional team can afford reliable financial advisory services to customers, and helps customers get a full return.</p>
+				<P>Through qualitative and quantitative analysis, we focus on the core financial needs of our customers. We breakdown the single situation of product and market, screening global investment products for customers in multi-dimensional manner. Meanwhile, we customize asset allocation portfolio which is specialized, personalized and comprehensive.</P>
+				<P>We are aiming to create maximum value for investors and reach a win-win situation at last.</P>
+				<P>Based on the world, our professional team are looking for innovative sustainable high-quality products, building barrier-free investment channels, so that customers can seize the market opportunities in advance, and reach more achievements of customers’ wealth.</P>
+				<P>Our customers can enjoy more outstanding experience. We not only manage the wealth of customers, but also arrange a series of exclusive and honorable services and events, including, but not limited to, special bus reception, point-to-point support services.</P>
 			</div>
-			<div class="lunbo">
-				<el-carousel :interval="4000" type="card" @change='ddd'>
-				    <el-carousel-item v-for="(item,index) in url" :key="">
-						<img :src="item.img1">
-					</el-carousel-item>
-				  </el-carousel>
-			</div>
-			<p class="wen">{{wenzia}}</p>
+
 		</div>
-	</div>
+    </div>
 </template>
 <script>
-	import ajax from '@utils/config';
-	export default {
-		data() {
-			return {
-				wenzia:'Any block chain technology enthusiasts can apply to be a platform developer.',
-				img1: require("@res/imgs/imga/aboutdc.jpg"),
-				url: [{
-						img1: require("@res/imgs/xmys1.png"),
-						id:0,
-						wenzib:'Any block chain technology enthusiasts can apply to be a platform developer.',
-					},
-					{
-						img1: require("@res/imgs/xmys2.png"),
-						id:1,
-						wenzib:'Gold Ore will provide basic technical backups and sound developing environment.',
-					},
-					{
-						img1: require("@res/imgs/xmys3.png"),
-						id:2,
-						wenzib:'Gold Ore will explore block chain application area with developers together.',
-					},
-					{
-						img1: require("@res/imgs/xmys4.png"),
-						id:3,
-						wenzib:'In order to encourage the development, Gold Ore will launch a corresponding developer awarding scheme.',
-					}
-				],
-				
-			}
-		},
-		computed: {
-			
-		},
-		created() { 
-			this.fanding()
-		},
-		mounted() { },
-		methods: {
-			fanding(){
+import ajax from '@utils/config';
+import {WOW} from 'wowjs';
+export default {
+    data() {
+        return {
+        	img1: require("@res/imgd/bannercc.png"),
+        }
+    },
+    computed: {
+
+    },
+    created() {
+    	this.fanding()
+    },
+    mounted() {
+    	new WOW().init() 
+    },
+    methods: {
+    	fanding(){
 				window.scrollTo(0,0);
 			},
-			ddd(value){
-				console.log(value)
-				this.url.map((item) => {
-					if(item.id == value) {
-						this.wenzia = item.wenzib
-					}
-				})
-			},
-		},
-		filters: {}
-	}
+    },
+    filters: {
+    }
+}
 </script>
 <style lang="less" scoped>
 .banner{
@@ -93,21 +66,33 @@ APPLICATION PLATFORM</P>
 		left: 399px;
 		bottom: 220px;
  }
-	.lunbo{
-		width: 100%;
-		height: 285px;
-		margin-bottom: 37px;
-	}
-	.lunbo img{
-		width: 100%;
-	}
-	.wen{
-		text-align: center;
-		font-size:16px;
-		font-family:ArialMT;
-		font-weight:400;
-		color:rgba(124,124,139,1);
-		line-height:25px;
-		margin-bottom: 60px;
-	}
+.introduce{
+	width: 100%;
+	overflow: hidden;
+}
+.introduce h1{
+	font-size:36px;
+	font-family:MyriadPro-Regular;
+	font-weight:bold;
+	color:rgba(0,0,0,1);
+	line-height:36px;
+	text-align: center;
+	padding: 82px 0px 105px 0px;
+}
+.introduce p{
+	font-size:16px;
+	font-family:SenticoSansDT-Light;
+	font-weight:normal;
+	color:rgba(0,0,0,1);
+	text-align: left;
+	margin-bottom: 70px;
+	line-height: 30px;
+}
+.introduce img{
+	width: 100%;
+	height: 200px;
+	margin-bottom: 78px;
+}
 </style>
+
+

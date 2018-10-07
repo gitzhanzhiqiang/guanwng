@@ -7,41 +7,14 @@ FREE BLOCK CHAIN <br />
 APPLICATION PLATFORM</P>
 		</div>
 		<div class="con">
-			<div class="Partner">
-				<h2 class="cent">WHAT IS GOLD ORE?</h2>
-				<p>We are dedicated to the development and application of the block chain technology. Aiming to design a practical and meaningful application of block chain with developers, Gold Ore provides an open source platform to block chain technology enthusiasts as well as given technical assistance, so that developers can fully play their all talent and imagination. Meanwhile, a non-developer can enjoy the fun from block chain technology as a user, because our services are towards to all.</p>
+			<div class="introduce">
+				<h1>SUNFIN</h1>
+				<p>A financial technology group that provides diversified financial services.</p>
+				<p>SUNFIN is a comprehensive financial technology group which is contributed to provide diversified financial service to global customers in order to meet their needs in all aspects of investment. The company is founded by senior financial experts from Singapore, Hongkong and Southeast Asia, within veteran team of market research and professional financial planning, as well as rich practical experience in investment and financial management both home and abroad.</p>
+				<p>Global financial products from the group meet customers' pressing needs ranging from overseas fund investment, wealth inheritance, Life insurance, retirement planning to personal health management, overseas life plan, children overseas education and so on, aiming to afford all scope of guarantee to customers and their loves.</p>
+				<img :src="aboutimg"/>
 			</div>
-			<div class="follows">
-				<ul>
-					<li>
-						<b>	
-							<span class="time">2697</span>
-							<span class="Tril">Trillions</span>
-						</b>
-						<img src="~@res/imgs/imga/touying.png"/>
-						<p style="padding-top: 200px;">Global AI market size in</p>
-						<p>2018</p>
-					</li>
-					<li>
-						<b>	
-							<span class="time">55<a>%</a></span>
-						</b>
-						<img src="~@res/imgs/imga/touying.png"/>
-						<p style="padding-top: 200px;">55% compound annual</p>
-						<p>rate of growth in future</p>
-					</li>
-					<li>
-						<b>	
-							<span class="time">10</span>
-							<span class="Tril">Trillions</span>
-						</b>
-						<img src="~@res/imgs/imga/touying.png"/>
-						<p style="padding-top: 200px;">Market size of encrypted</p>
-						<p>digital currency and block</p>
-						<p>chain can reach 10 trillion USD dolla</p>
-					</li>
-				</ul>
-			</div>
+			
 		</div>
     </div>
 </template>
@@ -51,7 +24,8 @@ import {WOW} from 'wowjs';
 export default {
     data() {
         return {
-        	img1: require("@res/imgs/imga/aboutdb.jpg"),
+        	img1: require("@res/imgd/bannercc.png"),
+        	aboutimg: require("@res/imgd/aboutimg.png"),
         }
     },
     computed: {
@@ -90,97 +64,33 @@ export default {
 		left: 399px;
 		bottom: 220px;
  }
-.Partner {
+.introduce{
 	width: 100%;
 	overflow: hidden;
-	margin-bottom: 40px;
 }
-.Partner P{
-	width:918px;
+.introduce h1{
+	font-size:36px;
+	font-family:MyriadPro-Regular;
+	font-weight:bold;
+	color:rgba(0,0,0,1);
+	line-height:36px;
+	text-align: center;
+	padding: 82px 0px 105px 0px;
+}
+.introduce p{
 	font-size:16px;
-	font-family:ArialMT;
-	font-weight:400;
-	color:#808080;
-	line-height: 25px;
-	margin: 0 auto;
+	font-family:SenticoSansDT-Light;
+	font-weight:normal;
+	color:rgba(0,0,0,1);
+	text-align: left;
+	margin-bottom: 70px;
+	line-height: 30px;
 }
-.follows{
-	width: 1100px;
-	overflow: hidden;
-	margin-bottom: 60px;
+.introduce img{
+	width: 100%;
+	height: 200px;
+	margin-bottom: 78px;
 }
-
-.follows ul{
-	overflow: hidden;
-	margin-bottom: 15px;
-}
-.follows ul li{
-	width: 365px;
-	height: 300px;
-	float: left;
-	position: relative;
-}
-.follows ul li b{
-	width: 163px;
-	height: 163px;
-	background: url(images/qiu.png) no-repeat;
-	background-size: 100% 100%;
-	display: block;
-	margin: 0 auto;
-	visibility: visible;
-    animation-duration: 2s;
-    animation-delay: 300ms;
-    animation-iteration-count: infinite;
-    animation-name: pulse;
-    position: absolute;	
-    z-index: 22;
-    left: 95px;
-    top: 14px;
-}
-.follows ul li b .time{
-	display: block;
-	font-size:50px;
-	font-family:PingFangSC-Semibold;
-	font-weight:600;
-	color:rgba(255,255,255,1);
-	text-align: center;
-	padding-top: 40px;
-}
-.follows ul li b .time a{
-	font-size:24px;
-	font-family:PingFangSC-Semibold;
-	font-weight:600;
-	color:rgba(255,255,255,1);
-	line-height:14px;
-	margin-left: 5px;
-}
-.follows ul li b .Tril{
-	font-size:19px;
-	font-family:PingFangSC-Light;
-	font-weight:300;
-	color:rgba(255,255,255,1);
-	line-height:30px;
-	display: block;
-	text-align: center;
-}
-.follows ul li p{
-	font-size:16px;
-	font-family:ArialMT;
-	font-weight:400;
-	color:rgba(124,124,139,1);
-	line-height:25px;
-	margin: 0 auto;
-	text-align: center;
-}
-.follows ul li img{
-		display: block;
-		width:227px;
-		height:225px;
-		position: absolute;
-		z-index: 0;
-	    top: 30px;
-	    left: 130px;
-	}
 </style>
 
 

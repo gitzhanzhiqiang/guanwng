@@ -98,8 +98,9 @@ module.exports = {
     })
   ],
   devServer: {
-    // host: '192.168.1.31',
-     host: '192.168.1.45',
+     host: '192.168.15.105',
+  //   host: '192.168.1.45',
+    //  host: '10.0.0.115',
 //  host: 'localhost',
     port: 8099,
     disableHostCheck: true,

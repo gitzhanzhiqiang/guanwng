@@ -61,7 +61,8 @@ module.exports = {
     })
   ],
   devServer: {
-      host: '192.168.1.45',
+      host: '192.168.15.105',
+       // host: '10.0.0.115',
     //  host: '192.168.1.36',
     //host: 'localhost',
     port: 8087,

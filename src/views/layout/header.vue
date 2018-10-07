@@ -30,6 +30,9 @@
                 <li @click="activeChange(3);aboutChange();servChange();active3 = true;$router.push('/sunfin/news')" :class="{'active': active3 && !$store.getters.nav}">
                     <span>NEWS</span>
                 </li>
+                <li @click="activeChange(3);aboutChange();servChange();active3 = true;$router.push('/sunfin/news')" :class="{'active': active3 && !$store.getters.nav}">
+                    <span>Contact Us</span>
+                </li>
                 <li style="margin-left: 90px;" @click="activeChange(3);aboutChange();servChange();active3 = true;$router.push('/sunfin/index')" :class="{'active': active3 && !$store.getters.nav}">
                     <span>Sign In</span>
                 </li>
@@ -43,8 +46,11 @@
                 <div class="menuItem" @click="servChange();$router.push('/sunfin/advantages');activeChange(2);active2 = true;aboutChange(2);about2 = true" :class="{'actives': about2}">
                     <li>Project background</li>
                 </div>
-                <div class="menuItem menuItem2" @click="servChange();$router.push('/sunfin/mission');activeChange(2);active2 = true;aboutChange(3);about3 = true" :class="{'actives': about3}" style="margin-bottom: 15px;">
+                <div class="menuItem" @click="servChange();$router.push('/sunfin/mission');activeChange(2);active2 = true;aboutChange(3);about3 = true" :class="{'actives': about3}">
                     <li>Why you choose Gold Ore ?</li>
+                </div>
+                 <div class="menuItem menuItem2" @click="servChange();$router.push('/sunfin/company');activeChange(2);active4 = true;aboutChange(4);about4 = true" :class="{'actives': about4}" style="margin-bottom: 15px;">
+                    <li>company</li>
                 </div>
             </div>
             <div class="serviceSecondMenu" v-if="servicesUpDown" v-on:mouseenter="dataDetails('servicesUpDown')" v-on:mouseleave="hiddenDetail('servicesUpDown')">
